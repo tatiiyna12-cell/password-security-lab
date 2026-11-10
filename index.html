@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Password Security Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Password Security Lab</h1>
+    <p>Skriv et testpassord og trykk på knappen.</p>
+
+    <form id="form">
+      <label for="password">Passord</label>
+      <input id="password" type="password" maxlength="128" autocomplete="off" aria-describedby="privacy">
+      <button type="submit">Sjekk passord</button>
+    </form>
+    <p id="privacy">Bruk et eksempel, ikke ditt ekte passord. Det du skriver blir ikke lagret eller sendt.</p>
+
+    <p id="result" role="status">Ingen passord sjekket ennå.</p>
+    <div id="meter" role="progressbar" aria-label="Poeng" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div id="bar"></div>
+    </div>
+    <p id="tip">Et lengre passord gir flere poeng.</p>
+
+    <h2>Slik regnes poengene</h2>
+    <ul>
+      <li>Minst 12 tegn: 20 poeng</li>
+      <li>Minst 16 tegn: 20 poeng til</li>
+      <li>Store og små bokstaver (A–Z, Æ, Ø, Å): 20 poeng</li>
+      <li>Minst ett tall: 20 poeng</li>
+      <li>Et av tegnene ! @ # $ % &amp; * + - = ?: 20 poeng</li>
+    </ul>
+    <p class="note">Under 12 tegn eller ord som «password» og «passord» gir maks 40 poeng. Dette er en enkel skolemodell, ikke en garanti for et sikkert passord.</p>
+  </main>
+</body>
+</html>
